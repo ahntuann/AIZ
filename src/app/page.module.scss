@@ -1,0 +1,198 @@
+.hero {
+  background: url("../../public/back.jpg") 0.2;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  width: 100%;
+
+  /* 1. Đây là chìa khóa: "Ghim" ảnh nền cố định vào màn hình */
+  background-attachment: fixed;
+
+  /* 2. Căn ảnh nền ra giữa */
+  background-position: center;
+
+  /* 3. Đảm bảo ảnh không bị lặp lại */
+  background-repeat: no-repeat;
+
+  /* 4. Phóng to/thu nhỏ ảnh để lấp đầy toàn bộ .hero */
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #222;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #9f55ff, #ff5f95, #ffb04f);
+
+    /* 2. Cắt background theo hình dạng của chữ */
+    /* Đây là thuộc tính quan trọng nhất */
+    background-clip: text;
+    -webkit-background-clip: text; /* Dùng cho trình duyệt WebKit (Chrome, Safari) */
+
+    /* 3. Làm cho màu chữ trong suốt để nền gradient có thể hiển thị qua */
+    -webkit-text-fill-color: transparent;
+
+    /* Tùy chọn: Đảm bảo phần tử co dãn đúng với nội dung chữ */
+    display: inline-block;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.9rem;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .cta {
+    background: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: #e0e0e0;
+    }
+  }
+}
+
+.content {
+  text-align: center;
+  max-width: 700px;
+  margin: 6rem auto 0;
+  padding: 0 2rem;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .gradient {
+    background: linear-gradient(to right, #9f55ff, #ff5f95, #ffb04f);
+
+    /* 2. Cắt background theo hình dạng của chữ */
+    /* Đây là thuộc tính quan trọng nhất */
+    background-clip: text;
+    -webkit-background-clip: text; /* Dùng cho trình duyệt WebKit (Chrome, Safari) */
+
+    /* 3. Làm cho màu chữ trong suốt để nền gradient có thể hiển thị qua */
+    -webkit-text-fill-color: transparent;
+
+    /* Tùy chọn: Đảm bảo phần tử co dãn đúng với nội dung chữ */
+    display: inline-block;
+  }
+
+  p {
+    color: #cfcfcf;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+
+    input {
+      padding: 0.9rem 1.2rem;
+      border-radius: 8px;
+      border: 1px solid #333;
+      outline: none;
+      width: 100%;
+      background: #1a1a1a;
+      color: white;
+      font-size: 0.9rem;
+
+      &::placeholder {
+        color: #666;
+      }
+    }
+
+    button {
+      background: #fff;
+      border: none;
+      color: #000;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+      font-size: 0.9rem;
+
+      &:hover {
+        background: #e0e0e0;
+      }
+    }
+  }
+}
+
+.preview {
+  margin: 8rem auto 4rem;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0 2rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: #888;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .mockup {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1rem 1rem;
+    color: #666;
+    font-size: 1.1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    img {
+      width: 100%;
+    }
+  }
+}
