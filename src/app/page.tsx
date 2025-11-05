@@ -11,7 +11,7 @@ export default function Home() {
           <a href="#">Về chúng tôi</a>
           <a href="#">Gói</a>
         </div>
-        <button className={styles.cta}>Get Started</button>
+        <button className={styles.cta}>Bắt đầu ngay</button>
       </nav>
 
       <section className={styles.content}>
